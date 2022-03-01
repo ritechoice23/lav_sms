@@ -70,8 +70,10 @@ class StudentRecordController extends Controller
             $photo = $req->file('photo');
             $f = Qs::getFileMetaData($photo);
             $f['name'] = 'photo.' . $f['ext'];
-            $f['path'] = $photo->storeAs(Qs::getUploadPath('student').$data['code'], $f['name']);
-            $data['photo'] = asset('storage/' . $f['path']);
+//            $f['path'] = $photo->storeAs(Qs::getUploadPath('student').$data['code'], $f['name']);
+            $photo->move(Qs::getUploadPath('student').$data['code'], $f['name']);
+            $f['path'] = Qs::getUploadPath('student').$data['code'].'/'.$f['name'];
+            $data['photo'] =  $f['path'];
         }
 
         $user = $this->user->create($data); // Create User
@@ -153,8 +155,10 @@ class StudentRecordController extends Controller
             $photo = $req->file('photo');
             $f = Qs::getFileMetaData($photo);
             $f['name'] = 'photo.' . $f['ext'];
-            $f['path'] = $photo->storeAs(Qs::getUploadPath('student').$sr->user->code, $f['name']);
-            $d['photo'] = asset('storage/' . $f['path']);
+//            $f['path'] = $photo->storeAs(Qs::getUploadPath('student').$sr->user->code, $f['name']);
+            $photo->move(Qs::getUploadPath('student').$sr->user->code, $f['name']);
+            $f['path'] = Qs::getUploadPath('student').$sr->user->code.'/'.$f['name'];
+            $d['photo'] = $f['path'];
         }
 
         $this->user->update($sr->user->id, $d); // Update User Details

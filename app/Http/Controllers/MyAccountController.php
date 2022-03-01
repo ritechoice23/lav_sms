@@ -42,8 +42,10 @@ class MyAccountController extends Controller
             $photo = $req->file('photo');
             $f = Qs::getFileMetaData($photo);
             $f['name'] = 'photo.' . $f['ext'];
-            $f['path'] = $photo->storeAs(Qs::getUploadPath($user_type).$code, $f['name']);
-            $d['photo'] = asset('storage/' . $f['path']);
+//            $f['path'] = $photo->storeAs(Qs::getUploadPath($user_type).$code, $f['name']);
+            $f['path'] = $photo->move(Qs::getUploadPath($user_type).$code, $f['name']);
+//            $d['photo'] = asset('storage/' . $f['path']);
+            $d['photo'] = Qs::getUploadPath($user_type).$code;
         }
 
         $this->user->update($user->id, $d);
