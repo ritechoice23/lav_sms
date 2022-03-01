@@ -21,7 +21,7 @@
             <div class="card-body">
                 <div class="media">
                     <div class="mr-3">
-                        <a href="{{ route('my_account') }}"><img src="{{ Auth::user()->photo }}" width="38" height="38" class="rounded-circle" alt="photo"></a>
+                        <a href="{{ route('my_account') }}"><img src="{{ asset(Auth::user()->photo) }}" width="38" height="38" class="rounded-circle" alt="photo"></a>
                     </div>
 
                     <div class="media-body">
@@ -52,17 +52,17 @@
                 </li>
 
                 {{--Academics--}}
-                @if(Qs::userIsAcademic())
+            {{--    @if(Qs::userIsAcademic())
                     <li class="nav-item nav-item-submenu {{ in_array(Route::currentRouteName(), ['tt.index', 'ttr.edit', 'ttr.show', 'ttr.manage']) ? 'nav-item-expanded nav-item-open' : '' }} ">
                         <a href="#" class="nav-link"><i class="icon-graduation2"></i> <span> Academics</span></a>
 
                         <ul class="nav nav-group-sub" data-submenu-title="Manage Academics">
 
-                        {{--Timetables--}}
+                        --}}{{--Timetables--}}{{--
                             <li class="nav-item"><a href="{{ route('tt.index') }}" class="nav-link {{ in_array(Route::currentRouteName(), ['tt.index']) ? 'active' : '' }}">Timetables</a></li>
                         </ul>
                     </li>
-                    @endif
+                    @endif--}}
 
                 {{--Administrative--}}
                 @if(Qs::userIsAdministrative())

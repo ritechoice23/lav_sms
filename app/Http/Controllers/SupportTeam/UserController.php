@@ -87,8 +87,12 @@ class UserController extends Controller
             $photo = $req->file('photo');
             $f = Qs::getFileMetaData($photo);
             $f['name'] = 'photo.' . $f['ext'];
-            $f['path'] = $photo->storeAs(Qs::getUploadPath($user_type).$data['code'], $f['name']);
-            $data['photo'] = asset('storage/' . $f['path']);
+//            $f['path'] = $photo->storeAs(Qs::getUploadPath($user_type).$data['code'], $f['name']);
+
+            $photo->move(Qs::getUploadPath($user_type).$data['code'], $f['name']);
+            $f['path'] = Qs::getUploadPath($user_type).$data['code'].'/'.$f['name'];
+
+            $data['photo'] = $f['path'];
         }
 
         /* Ensure that both username and Email are not blank*/
@@ -138,8 +142,12 @@ class UserController extends Controller
             $photo = $req->file('photo');
             $f = Qs::getFileMetaData($photo);
             $f['name'] = 'photo.' . $f['ext'];
-            $f['path'] = $photo->storeAs(Qs::getUploadPath($user_type).$user->code, $f['name']);
-            $data['photo'] = asset('storage/' . $f['path']);
+//            $f['path'] = $photo->storeAs(Qs::getUploadPath($user_type).$user->code, $f['name']);
+
+            $photo->move(Qs::getUploadPath($user_type).$user->code, $f['name']);
+            $f['path'] = Qs::getUploadPath($user_type).$user->code.'/'.$f['name'];
+
+            $data['photo'] = $f['path'];
         }
 
         $this->user->update($id, $data);   /* UPDATE USER RECORD */

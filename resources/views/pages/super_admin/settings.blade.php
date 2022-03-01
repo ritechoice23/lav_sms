@@ -4,7 +4,7 @@
 
     <div class="card">
         <div class="card-header header-elements-inline">
-            <h6 class="card-title font-weight-semibold">Update System Settungs </h6>
+            <h6 class="card-title font-weight-semibold">Update System Settings </h6>
             {!! Qs::getPanelOptions() !!}
         </div>
 
@@ -51,7 +51,7 @@
                         <div class="form-group row">
                             <label class="col-lg-3 col-form-label font-weight-semibold">School Address <span class="text-danger">*</span></label>
                             <div class="col-lg-9">
-                                <input required name="address" value="{{ $s['address'] }}" type="text" class="form-control" placeholder="School Address">
+                                <textarea required name="address" class="form-control" placeholder="School Address" rows="3">{{ $s['address'] }}</textarea>
                             </div>
                         </div>
                         <div class="form-group row">
