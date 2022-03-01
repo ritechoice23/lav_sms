@@ -1,67 +1,33 @@
-<!-- ################# Our Instructors Starts Here#######################--->
-
-<div class="our-instructor">
+<section class="bg-03">
     <div class="container">
-        <div class="session-title row">
-            <h2>Our Instructors</h2>
-        </div>
-        <div class="instruct-row row">
-            <div class="col-md-3">
-                <div class="instruct-card">
-                    <img src="assets/images/team/avatar-2.jpg" alt="">
-                    <h6>Andre Jhon</h6>
-                    <p>Graphic Design</p>
-
-                    <ul>
-                        <li><i class="fab fa-facebook-f"></i></li>
-                        <li><i class="fab fa-twitter"></i></li>
-                        <li><i class="fab fa-linkedin-in"></i></li>
-                        <li><i class="fab fa-pinterest-p"></i></li>
-                    </ul>
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                <div class="_lk_bg_cd">
+                    <div  class="counting" data-count="1000">90</div>
+                    <h5>TEACHERS</h5>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="instruct-card">
-                    <img src="assets/images/team/avatar-3.jpg" alt="">
-                    <h6>Ahalkji Jhon</h6>
-                    <p>Graphic Design</p>
 
-                    <ul>
-                        <li><i class="fab fa-facebook-f"></i></li>
-                        <li><i class="fab fa-twitter"></i></li>
-                        <li><i class="fab fa-linkedin-in"></i></li>
-                        <li><i class="fab fa-pinterest-p"></i></li>
-                    </ul>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                <div class="_lk_bg_cd">
+                    <div  class="counting" data-count="1000">67</div>
+                    <h5>COURSES</h5>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="instruct-card">
-                    <img src="assets/images/team/avatar-5.jpg" alt="">
-                    <h6>Reniju Sam</h6>
-                    <p>Graphic Design</p>
 
-                    <ul>
-                        <li><i class="fab fa-facebook-f"></i></li>
-                        <li><i class="fab fa-twitter"></i></li>
-                        <li><i class="fab fa-linkedin-in"></i></li>
-                        <li><i class="fab fa-pinterest-p"></i></li>
-                    </ul>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                <div class="_lk_bg_cd">
+                    <div  class="counting" data-count="1000">80</div>
+                    <h5>LESSONS</h5>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="instruct-card">
-                    <img src="assets/images/team/avatar-4.jpg" alt="">
-                    <h6>Depak Andrw</h6>
-                    <p>Graphic Design</p>
 
-                    <ul>
-                        <li><i class="fab fa-facebook-f"></i></li>
-                        <li><i class="fab fa-twitter"></i></li>
-                        <li><i class="fab fa-linkedin-in"></i></li>
-                        <li><i class="fab fa-pinterest-p"></i></li>
-                    </ul>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                <div class="_lk_bg_cd">
+                    <div class="counting" data-count="1000">100</div>
+                    <h5>ACTIVITIES</h5>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>
