@@ -8,7 +8,11 @@ Auth::routes();
 Route::get('/privacy-policy', 'HomeController@privacy_policy')->name('privacy_policy');
 Route::get('/terms-of-use', 'HomeController@terms_of_use')->name('terms_of_use');
 
-Route::get('/', [GuestController::class, 'index'])->name('home');
+//this routes control pages that are not part of the portal
+
+    Route::get('/', [GuestController::class, 'index'])->name('index');
+    Route::get('/about', [GuestController::class, 'aboutUs'])->name('about');
+    Route::get('/contact_us', [GuestController::class, 'contactUs'])->name('contact_us');
 
 
 Route::group(['middleware' => 'auth'], function () {

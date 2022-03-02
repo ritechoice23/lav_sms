@@ -19,17 +19,16 @@
                 <div class="row">
                     <div class="menu-toggle"></div>
                     <div class="logo">
-                        <img src="assets/images/logo-01.png">
+                        <img src="/guest/assets/images/logo-01.png">
                     </div>
 
                     <div class="my-nav">
                         <div class="menu">
                             <ul>
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="about-us.html">About Us</a></li>
-                                <li><a href="services.html">Services</a></li>
-                                <li><a href="blog.html">Blog</a></li>
-                                <li><a href="contact-us.html">Contact Us</a></li>
+                                <li><a href="{{route('index')}}">Home</a></li>
+                                <li><a href="{{route('dashboard')}}">Portal</a></li>
+                                <li><a href="{{route('about')}}">About Us</a></li>
+                                <li><a href="{{route('contact_us')}}">Contact Us</a></li>
                             </ul>
                         </div>
                     </div>
@@ -65,11 +64,10 @@
                 <div class="fotter-content">
                     <h2>Quick Links</h2>
                     <ul>
-                        <li><i class="fal fa-chevron-double-right"></i>Home</li>
-                        <li><i class="fal fa-chevron-double-right"></i>About Us</li>
-                        <li><i class="fal fa-chevron-double-right"></i>Services</li>
-                        <li><i class="fal fa-chevron-double-right"></i>Blog</li>
-                        <li><i class="fal fa-chevron-double-right"></i>Contact Us</li>
+                        <li><i class="fal fa-chevron-double-right"></i><a href="{{route('index')}}">Home</a></li>
+                        <li><i class="fal fa-chevron-double-right"></i><a href="{{route('dashboard')}}">Portal</a></li>
+                        <li><i class="fal fa-chevron-double-right"></i><a href="{{route('about')}}">About Us</a></li>
+                        <li><i class="fal fa-chevron-double-right"></i><a href="{{route('contact_us')}}">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
@@ -96,7 +94,6 @@
 </footer>
 
 </body>
-
 <script src="assets/js/jquery-3.2.1.min.js"></script>
 <script src="assets/js/popper.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
